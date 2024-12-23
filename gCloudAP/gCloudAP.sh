@@ -26,7 +26,7 @@ echo '''
 / / /______\/ // / /_________\/_______/\__\// / /____\/ // / /____\/ /   \ \___\/ // / /_       __\ \_\/ / /           
 \/___________/ \/____________/\_______\/    \/_________/ \/_________/     \/_____/ \_\___\     /____/_/\/_/                                                                                                                                  
 '''
-echo -e "${YELLOW}[DISCLAIMER]${WHITE} gCloudAP (Google Cloud Artifact Push) was created for testing purposes and should only be used in a testing environment." && echo "" 
+echo -e "${YELLOW}[DISCLAIMER]${WHITE} gCloudAP (Google Cloud Artifact Push) was created for testing purposes and should only be used in a testing environment."
 echo -e "${YELLOW}[REQUIRED]${WHITE} Please ensure that you have ${YELLOW}docker${WHITE} and ${YELLOW}gcloud-cli${WHITE} installed and properly configured." && echo "" 
 
 # Verify if the user executed the script correctly
@@ -127,6 +127,8 @@ fi
 
 #### BUILD IMAGE ################################################################################
 
+echo -e "${YELLOW}[ACTION]${WHITE} Buidling Docker image." && echo "" 
+
 # Build the Docker image
 if [[ $TagOption == "N" ]];
 then
@@ -140,10 +142,16 @@ fi
 # Push the image to their project's Artifact Registry
 if [[ $TagOption == "N" ]];
 then
+    echo -e "${YELLOW}[ACTION]${WHITE} Tagging the local image with the repository name." && echo "" 
     docker tag $ImageName gcr.io/$2/$ImageName 
+
+    echo "" && echo -e "${YELLOW}[ACTION]${WHITE} Pushing the tagged image to Artifact Registry." && echo "" 
     docker push gcr.io/$2/$ImageName
 else
+    echo -e "${YELLOW}[ACTION]${WHITE} Tagging the local image with the repository name." && echo "" 
     docker tag $ImageName:$TagName gcr.io/$2/$ImageName
+
+    echo "" && echo -e "${YELLOW}[ACTION]${WHITE} Pushing the tagged image to Artifact Registry." && echo "" 
     docker push gcr.io/$2/$ImageName
 fi
 
