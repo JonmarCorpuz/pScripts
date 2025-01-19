@@ -44,9 +44,9 @@ else
     echo -e "${RED}[ERROR 4]${WHITE} The provided Project ID doesn't exist." && echo "" && exit 1
 fi
 
-#### GATHER USER INPUT  #########################################################################
+#### CLOUD STORAGE ##############################################################################
 
-#
+# Specify which file they want to upload to Cloud Storage
 while [[ $ALWAYS_TRUE=true ]];
 do
     read -p "$(echo -e ${YELLOW}[REQUIRED]${WHITE} Please enter the full path of the file that you want to upload to Cloud Storage:) " FilePath
@@ -59,7 +59,7 @@ do
 
 done
 
-#
+# Specify the bucket that the user wants to upload their file to
 while [[ $ALWAYS_TRUE=true ]];
 do
     read -p "$(echo -e ${YELLOW}[REQUIRED]${WHITE} Please enter the name of the Bucket that you want to upload the file to:) " BucketName
@@ -104,8 +104,8 @@ do
 
 done
 
-#### CLOUD STORAGE ##############################################################################
-
+# Upload the specified file to Cloud Storage
 gsutil cp $FilePath gs://$BucketName/
 
+# Exit successfully
 echo "" && echo -e "${GREEN}[SUCCESS]${WHITE} Your file was successfully uploaded over at gs://$BucketName/." && exit 0
