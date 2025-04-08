@@ -14,7 +14,7 @@ Votre script devra respecter le cahier des charges suivant :
 - [ ] À chaque action que vous effectuez, vous devez "logguer" les informations dans l’observateur d’événements de Windows dans la rubrique Application avec le nom AD_<Date>. 
 - [X] ~~Vous devez utiliser les fichiers CSV qui vous sont fournis. De plus, chaque fichier comporte le nom de l'utilisateur, mais aussi des informations supplémentaires comme le téléphone, ou l'âge. Vous devez conserver toutes les informations supplémentaires dans l'AD.~~  
 - [X] ~~Si l'utilisateur n'existe pas, vous devez lui créer son compte AD et lui envoyer un courriel de confirmation.~~
-- [X] ~~Vous devez créer un nom d'utilisateur utilisant le modèle première lettre du prénom suivi du nom de famille. Ex : Pour Olfa Chabbouh, le nom de login sera ochabbouh ou si un autre utilisateur se retrouve avec le même nom de login, ajoutez un chiffre à la fin. Exemple : ochabbouh1.~~ 
+- [X] ~~Vous devez créer un nom d'utilisateur utilisant le modèle première lettre du prénom suivi du nom de famille.~~ 
 - [X] ~~Pour chaque nouvel utilisateur, vous devez vous assurer qu'il devra changer son mot de passe à la prochaine connexion.~~  
 - [ ] Si l'utilisateur vient d'être désinscrit, vous désactivez son compte et lui envoyer un courriel d’avertissement.  
 - [ ] Si un utilisateur existe déjà et qu'il est encore inscrit, aucune action n'est requise.  
@@ -30,10 +30,6 @@ Précisions :
 
 En tant qu’administrateur réseau/système, votre futur travail vous amènera à manipuler un grand nombre de scripts. Comme pour un projet de développement d’application, la gestion du code source, son partage et la collaboration associée à son écriture, représente un immense enjeu. Pour remédier à ces différentes difficultés, l’outil Git, associé à des services de forges 
 logicielles, est l’outil idéal. C’est pour cela que dans le cadre de ce cours, vous devez utiliser Git le GitLab du département pour collaborer, partager et sauvegarder votre travail.  
-
-* Vous devez créer un projet sur le GitLab du département 
-* Le nom du projet sera : H34_H24_PW_Nom-Des-membre 
-* Ajoutez votre enseignant au projet comme propriétaire (ochabbouh@crosemont.qc.ca)
 
 Vous serez évalué en deux partie :  
 
