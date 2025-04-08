@@ -99,7 +99,6 @@ Function createUser{
     Write-Output ""
   }
 }
-#}
 
 Function enableUser{
   New-Item -Path ./usersToEnable.txt -ItemType File
