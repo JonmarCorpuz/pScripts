@@ -46,7 +46,7 @@ while ($true) {
 $sender = Read-Host "Entrez l'addresse courriel source qui va envoyer les courriels de confirmation" 
 $smtpServer = "smtp.gmail.com"
 $smtpPort = 587
-$appPassword = "uwwhmmjqmfxvteax"
+$appPassword = Read-Host "Entrez l'app password de votre courriel source qui va envoyer les courriels de confirmation"
 $secureAppPassword = ConvertTo-SecureString $appPassword -AsPlainText -Force
 $credentials = New-Object System.Management.Automation.PSCredential ($sender, $secureAppPassword)
 
