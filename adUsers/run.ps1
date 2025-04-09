@@ -78,9 +78,6 @@ Function createUser{
          
       } catch {
 
-        $nomUtilisateur=$prenom+$nom+$count
-        $count++
-
         Write-Output "$nomUtilisateur est disponible"
         Write-Output ""
 
