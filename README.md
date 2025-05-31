@@ -1,6 +1,6 @@
-# LetsCreate Overview
+# pScripts Overview
 
-LetsCreate is a command line toolkit that allows users to create various resources for various different platforms.
+pScripts (**Playground Scripts**) is a central repository containing playground scripts used in testing environments for learning and testing purposes.
 
 # Google Cloud Platform
 
@@ -8,4 +8,12 @@ LetsCreate is a command line toolkit that allows users to create various resourc
 
 # Amazon Web Services
 
+N/A
+
 # Proxmox
+
+N/A
+
+# Active Directory
+
+[adUsers](https://github.com/JonmarCorpuz/pScripts/tree/main/adUsers)
